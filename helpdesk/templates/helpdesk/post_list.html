@@ -5,6 +5,18 @@
     <title></title>
   </head>
   <body>
-<p>Test</p>
+
+    <div>
+    <h1><a href="/">Intercast helpdesk</a></h1>
+    </div>
+
+{% for post in posts %}
+    <div>
+      <p>published: {{post.published_date}}</p>
+      <h1><a href="">{{post.title}}</h1></a>
+      <p>{{post.text|linebreaksbr}}</p>
+    </div>
+{% endfor %}
+
   </body>
 </html>
